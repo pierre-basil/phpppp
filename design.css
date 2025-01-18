@@ -1,0 +1,403 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column; /* Ensure form is centered under navbar */
+}
+
+/* Navbar */
+nav {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 50px black;
+    padding: 15px;
+    display: flex;
+    align-items: center; /* Vertically center the navbar items */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Make sure navbar stays on top */
+}
+
+/* Logo styling - Flexbox for the logo text */
+.logo {
+    color: #E5E7EB; /* Light Gray */
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex; /* Use flex to keep "Pierre" and "Protection" on the same line */
+    gap: 5px; /* Add some space between "Pierre" and "Protection" */
+}
+
+.logo span {
+    display: inline-block;
+}
+
+/* Create a flex container for the navbar items */
+.menu-container {
+    display: flex;
+    justify-content: center; /* Center the menu items horizontally */
+    width: 100%; /* Make sure the container spans the whole width of the navbar */
+}
+
+ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.menu {
+    color: #A3B4C1; /* Light Slate Gray */
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #A3B4C1; /* Light Slate Gray underline effect */
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+    bottom: 0;
+    left: 0;
+}
+
+.menu:hover {
+    color: #FFFFFF; /* White on hover */
+}
+
+.menu:hover::before {
+    transform: scaleX(1); /* Underline effect on hover */
+}
+
+/* Form container */
+.form-container {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* Form max width */
+    height: auto;
+    margin-top: 80px; /* Adjusted to account for navbar height */
+    box-shadow: 0 0 50px black;
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Dark Text */
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555; /* Medium Gray */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #D1D5DB; /* Light Gray Border */
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    background-color: #F9FAFB; /* Very light gray for inputs */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50; /* Bright Green */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45A049; /* Darker Green on hover */
+}
+
+/* Footer for the form */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555; /* Medium Gray */
+}
+
+.form-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #3E1E68;
+    overflow: hidden;
+}
+
+.background span {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 30;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#clickhere{
+    color: black;
+}
+
+#onlywhiteitems{
+    color: white;
+}
+
+#turnonbut{
+    color: black;
+    background-color: white;
+}
+
+#pierreprotlogo{
+    font-family: "Open Sans", serif;
+    font-weight: 10px;
+    font-style: normal;
+    font-variation-settings:"wdth" 50;
+}
+
+#pierreprotlogo:hover{
+    color: black;
+    transition-duration: 1s;
+}
+
+#specialitemcolor{
+    color: greenyellow;
+}
+
+
+.background span:nth-child(0) {
+    color: #E45A84;
+    top: 27%;
+    left: 63%;
+    animation-duration: 78s;
+    animation-delay: -57s;
+    transform-origin: -13vw 18vh;
+    box-shadow: 40vmin 0 5.22853635149992vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #FFACAC;
+    top: 63%;
+    left: 53%;
+    animation-duration: 150s;
+    animation-delay: -9s;
+    transform-origin: -7vw 12vh;
+    box-shadow: 40vmin 0 5.213306646447303vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #583C87;
+    top: 39%;
+    left: 44%;
+    animation-duration: 67s;
+    animation-delay: -48s;
+    transform-origin: 21vw -7vh;
+    box-shadow: 40vmin 0 5.685741551270281vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #583C87;
+    top: 96%;
+    left: 23%;
+    animation-duration: 151s;
+    animation-delay: -110s;
+    transform-origin: 11vw -1vh;
+    box-shadow: 40vmin 0 5.726665911776081vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #E45A84;
+    top: 8%;
+    left: 50%;
+    animation-duration: 160s;
+    animation-delay: -138s;
+    transform-origin: 9vw 6vh;
+    box-shadow: -40vmin 0 5.7459961842740865vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #583C87;
+    top: 19%;
+    left: 22%;
+    animation-duration: 63s;
+    animation-delay: -148s;
+    transform-origin: 25vw 3vh;
+    box-shadow: -40vmin 0 5.450111390791022vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #583C87;
+    top: 82%;
+    left: 36%;
+    animation-duration: 114s;
+    animation-delay: -97s;
+    transform-origin: -5vw 14vh;
+    box-shadow: 40vmin 0 5.9579044967808485vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #E45A84;
+    top: 32%;
+    left: 73%;
+    animation-duration: 29s;
+    animation-delay: -79s;
+    transform-origin: -11vw -10vh;
+    box-shadow: -40vmin 0 5.909133779200271vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #FFACAC;
+    top: 27%;
+    left: 60%;
+    animation-duration: 125s;
+    animation-delay: -21s;
+    transform-origin: -12vw 21vh;
+    box-shadow: 40vmin 0 5.808871162553842vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #583C87;
+    top: 92%;
+    left: 11%;
+    animation-duration: 92s;
+    animation-delay: -111s;
+    transform-origin: 10vw 7vh;
+    box-shadow: 40vmin 0 5.107833389213982vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #583C87;
+    top: 63%;
+    left: 55%;
+    animation-duration: 120s;
+    animation-delay: -47s;
+    transform-origin: -2vw -7vh;
+    box-shadow: -40vmin 0 5.319611250614021vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #FFACAC;
+    top: 96%;
+    left: 48%;
+    animation-duration: 112s;
+    animation-delay: -160s;
+    transform-origin: 7vw 21vh;
+    box-shadow: 40vmin 0 5.616824965989634vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #FFACAC;
+    top: 32%;
+    left: 72%;
+    animation-duration: 40s;
+    animation-delay: -81s;
+    transform-origin: -17vw 15vh;
+    box-shadow: -40vmin 0 5.08630406564012vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #583C87;
+    top: 75%;
+    left: 51%;
+    animation-duration: 139s;
+    animation-delay: -171s;
+    transform-origin: -6vw -10vh;
+    box-shadow: -40vmin 0 5.733840070411111vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #583C87;
+    top: 82%;
+    left: 64%;
+    animation-duration: 102s;
+    animation-delay: -19s;
+    transform-origin: -18vw -5vh;
+    box-shadow: -40vmin 0 5.148897098522512vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #E45A84;
+    top: 17%;
+    left: 73%;
+    animation-duration: 16s;
+    animation-delay: -136s;
+    transform-origin: -8vw -22vh;
+    box-shadow: 40vmin 0 5.4673688612756175vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #FFACAC;
+    top: 41%;
+    left: 8%;
+    animation-duration: 160s;
+    animation-delay: -137s;
+    transform-origin: -10vw -21vh;
+    box-shadow: 40vmin 0 5.300561915228193vmin currentColor;
+}
+.background span:nth-child(17) {
+    color: #583C87;
+    top: 63%;
+    left: 84%;
+    animation-duration: 32s;
+    animation-delay: -55s;
+    transform-origin: -6vw 23vh;
+    box-shadow: -40vmin 0 5.746055730347411vmin currentColor;
+}
+.background span:nth-child(18) {
+    color: #583C87;
+    top: 75%;
+    left: 79%;
+    animation-duration: 52s;
+    animation-delay: -94s;
+    transform-origin: -2vw -12vh;
+    box-shadow: -40vmin 0 5.649505327331257vmin currentColor;
+}
+.background span:nth-child(19) {
+    color: #E45A84;
+    top: 49%;
+    left: 67%;
+    animation-duration: 100s;
+    animation-delay: -51s;
+    transform-origin: -1vw -2vh;
+    box-shadow: 40vmin 0 5.092414987483699vmin currentColor;
+}
